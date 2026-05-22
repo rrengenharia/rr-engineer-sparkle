@@ -72,6 +72,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "format-detection", content: "telephone=no, email=no, address=no" },
       { title: "RR Engenharia – Soluções em Engenharia, Reformas e Manutenção Predial" },
       { name: "description", content: "RR Engenharia executa obras residenciais e comerciais com precisão técnica, prazos rigorosos e acabamento de alto padrão. Impermeabilização, fachadas, pintura, alvenaria e mais." },
       { name: "author", content: "RR Engenharia" },
