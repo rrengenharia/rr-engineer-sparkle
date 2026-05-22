@@ -156,7 +156,7 @@ function Index() {
               Engenharia & Reformas em Salvador
             </span>
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              RR Engenharia — Soluções em <span className="text-primary">Engenharia, Reformas</span> e Manutenção Predial.
+              RR Engenharia — Soluções em <span className="text-primary">engenharia, reformas</span> e manutenção predial.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               Executamos sua obra residencial ou comercial com precisão técnica, cumprimento rigoroso de prazos e acabamento de alto padrão.
