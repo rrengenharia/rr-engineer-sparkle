@@ -170,8 +170,8 @@ function Index() {
               >
                 <MessageCircle size={18} /> Fale Conosco
               </a>
-              <a href="#servicos" className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-6 py-3.5 font-semibold text-foreground transition hover:border-foreground/40">
-                Ver Nossos Serviços
+              <a href="#portfolio" className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-6 py-3.5 font-semibold text-foreground transition hover:border-foreground/40">
+                Portfólio
               </a>
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
