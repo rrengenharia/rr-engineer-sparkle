@@ -435,7 +435,7 @@ function Index() {
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Mail size={16} className="text-accent" /> contato@rrengenharia.com.br
+                  <Mail size={16} className="text-accent" /> <span>contato@rrengenharia.com.br</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <MapPin size={16} className="text-accent" /> Salvador / BA
