@@ -163,12 +163,12 @@ function Index() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href={waLink("Olá! Gostaria de falar com um especialista da RR Engenharia.")}
+                href={waLink("Olá! Gostaria de falar com a RR Engenharia.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3.5 font-semibold text-accent-foreground shadow-sm transition hover:brightness-95"
               >
-                <MessageCircle size={18} /> Fale com um Especialista
+                <MessageCircle size={18} /> Fale Conosco
               </a>
               <a href="#servicos" className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-6 py-3.5 font-semibold text-foreground transition hover:border-foreground/40">
                 Ver Nossos Serviços
@@ -435,7 +435,7 @@ function Index() {
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <Mail size={16} className="text-accent" /> contato@rrengenharia.com.br
+                  <Mail size={16} className="text-accent" /> <span>contato@rrengenharia.com.br</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <MapPin size={16} className="text-accent" /> Salvador / BA
