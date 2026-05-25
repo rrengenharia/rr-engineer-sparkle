@@ -79,7 +79,7 @@ function Logo({ inverted = false }: { inverted?: boolean }) {
       <img
         src={logoImg}
         alt="RR Engenharia"
-        className={`h-12 w-auto md:h-14 ${inverted ? "brightness-0 invert" : ""}`}
+        className="h-12 w-auto md:h-14"
       />
     </a>
   );
