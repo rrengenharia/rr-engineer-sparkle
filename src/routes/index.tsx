@@ -25,6 +25,9 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import hero from "@/assets/hero.jpg";
+import fachadaImg from "@/assets/fachada.jpg";
+import pinturaImg from "@/assets/pintura-predial.jpg";
+import impermeabilizacaoImg from "@/assets/impermeabilizacao.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -59,15 +62,12 @@ const differentials = [
   { icon: CalendarClock, title: "Cumprimento de Prazos", desc: "Cronograma claro e prazo respeitado." },
 ];
 
-const categories = ["Todos", "Fachada", "Pintura", "Impermeabilização", "Reformas"] as const;
+const categories = ["Todos", "Fachada", "Pintura", "Impermeabilização"] as const;
 
 const portfolio = [
-  { cat: "Fachada", title: "Recuperação de Fachada — Condomínio Costa Azul", before: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80", after: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" },
-  { cat: "Pintura", title: "Pintura Interna — Residência Pituba", before: "https://images.unsplash.com/photo-1562184552-997c461abbe6?w=800&q=80", after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" },
-  { cat: "Impermeabilização", title: "Laje Impermeabilizada — Edifício Comercial", before: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=80", after: "https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=800&q=80" },
-  { cat: "Reformas", title: "Reforma Comercial — Loja Centro", before: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80", after: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80" },
-  { cat: "Fachada", title: "Restauro de Pastilhas — Edifício Residencial", before: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80", after: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&q=80" },
-  { cat: "Pintura", title: "Pintura Externa — Sobrado Alphaville", before: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=800&q=80", after: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" },
+  { cat: "Fachada", title: "Fachada", image: fachadaImg },
+  { cat: "Pintura", title: "Pintura", image: pinturaImg },
+  { cat: "Impermeabilização", title: "Impermeabilização", image: impermeabilizacaoImg },
 ];
 
 function Logo({ inverted = false }: { inverted?: boolean }) {
@@ -184,7 +184,7 @@ function Index() {
           </div>
           <div className="hidden lg:col-span-5 lg:block">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border shadow-xl">
-              <img src={hero} alt="Obra RR Engenharia" className="h-full w-full object-cover" />
+              <img src={fachadaImg} alt="Obra RR Engenharia" className="h-full w-full object-cover" />
               <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-background/95 p-4 backdrop-blur">
                 <div className="text-xs font-semibold uppercase tracking-wider text-accent">Projeto em destaque</div>
                 <div className="mt-1 text-sm font-semibold text-foreground">Restauração de fachada — Salvador / BA</div>
@@ -250,7 +250,7 @@ function Index() {
             <div className="max-w-2xl">
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Portfólio</span>
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
-                Antes e depois dos nossos projetos
+                Obras realizadas
               </h2>
               <p className="mt-4 text-muted-foreground">
                 Veja a transformação que entregamos em cada obra — do diagnóstico ao acabamento.
@@ -273,26 +273,13 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((p) => (
               <article key={p.title} className="overflow-hidden rounded-xl border border-border bg-card transition hover:shadow-lg">
-                <div className="grid grid-cols-2 gap-px bg-border">
-                  <div className="relative">
-                    <img src={p.before} alt="" className="aspect-[4/3] w-full object-cover" />
-                    <span className="absolute left-2 top-2 rounded bg-background/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                      Antes
-                    </span>
-                  </div>
-                  <div className="relative">
-                    <img src={p.after} alt="" className="aspect-[4/3] w-full object-cover" />
-                    <span className="absolute left-2 top-2 rounded bg-accent px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent-foreground">
-                      Depois
-                    </span>
-                  </div>
-                </div>
+                <img src={p.image} alt={p.title} className="aspect-[4/3] w-full object-cover" />
                 <div className="p-5">
                   <div className="text-xs font-semibold uppercase tracking-wider text-accent">{p.cat}</div>
-                  <h3 className="mt-1.5 text-sm font-semibold text-foreground">{p.title}</h3>
+                  <h3 className="mt-1.5 text-base font-semibold text-foreground">{p.title}</h3>
                 </div>
               </article>
             ))}
