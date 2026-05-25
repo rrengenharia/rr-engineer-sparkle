@@ -28,6 +28,7 @@ import hero from "@/assets/hero.jpg";
 import fachadaImg from "@/assets/fachada.jpg";
 import pinturaImg from "@/assets/pintura-predial.jpg";
 import impermeabilizacaoImg from "@/assets/impermeabilizacao.jpg";
+import logoImg from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -35,8 +36,10 @@ export const Route = createFileRoute("/")({
 
 const WHATSAPP_NUMBER = "5571984289200";
 const WHATSAPP_DISPLAY = "(71) 9 8428-9200";
-const waLink = (msg: string) =>
-  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+const WHATSAPP_DEFAULT_MESSAGE =
+  "Olá, vim pelo o site RR ENGENHARIA e gostaria de um orçamento";
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_DEFAULT_MESSAGE)}`;
+const waLink = (_msg?: string) => WHATSAPP_URL;
 
 const nav = [
   ["Início", "#home"],
