@@ -8,6 +8,7 @@ export const getRouter = () => {
   const router = createRouter({
     routeTree,
     context: { queryClient },
+    basepath: '/rr-engineer-sparkle',
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
   });
