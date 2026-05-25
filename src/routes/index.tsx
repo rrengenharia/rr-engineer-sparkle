@@ -76,15 +76,11 @@ const portfolio = [
 function Logo({ inverted = false }: { inverted?: boolean }) {
   return (
     <a href="#home" className="flex items-center gap-2.5">
-      <div className={`flex h-10 w-10 items-center justify-center rounded-md font-extrabold text-sm tracking-tighter ${inverted ? "bg-accent text-accent-foreground" : "bg-primary text-primary-foreground"}`}>
-        RR
-      </div>
-      <div className="flex flex-col leading-none">
-        <span className="text-base font-extrabold tracking-tight">RR ENGENHARIA</span>
-        <span className={`text-[10px] font-medium uppercase tracking-[0.18em] ${inverted ? "text-sidebar-foreground/60" : "text-muted-foreground"}`}>
-          Engenharia & Reformas
-        </span>
-      </div>
+      <img
+        src={logoImg}
+        alt="RR Engenharia"
+        className={`h-12 w-auto md:h-14 ${inverted ? "brightness-0 invert" : ""}`}
+      />
     </a>
   );
 }
