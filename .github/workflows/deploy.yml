@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 20
 
-     - name: Instalar dependências e fazer o Build
+      - name: Instalar dependências e fazer o Build
         run: |
           npm install
           npm install -D tailwindcss postcss autoprefixer
