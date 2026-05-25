@@ -33,7 +33,7 @@ jobs:
 
       - name: Publicar no GitHub Pages
         uses: actions/deploy-pages@v4
-
+        
         - name: Instalar dependências e fazer o Build
         run: |
           npm install
