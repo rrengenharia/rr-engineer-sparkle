@@ -25,6 +25,7 @@ jobs:
         run: |
           npm install
           npm run build
+          cp dist/index.html dist/404.html
 
       - name: Fazer upload dos arquivos para o Pages
         uses: actions/upload-pages-artifact@v3
@@ -33,9 +34,3 @@ jobs:
 
       - name: Publicar no GitHub Pages
         uses: actions/deploy-pages@v4
-        
-        - name: Instalar dependências e fazer o Build
-        run: |
-          npm install
-          npm run build
-          cp dist/index.html dist/404.html
