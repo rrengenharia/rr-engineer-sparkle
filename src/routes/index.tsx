@@ -28,6 +28,7 @@ import hero from "@/assets/hero.jpg";
 import fachadaImg from "@/assets/fachada.jpg";
 import pinturaImg from "@/assets/pintura-predial.jpg";
 import impermeabilizacaoImg from "@/assets/impermeabilizacao.jpg";
+import logoImg from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -35,8 +36,10 @@ export const Route = createFileRoute("/")({
 
 const WHATSAPP_NUMBER = "5571984289200";
 const WHATSAPP_DISPLAY = "(71) 9 8428-9200";
-const waLink = (msg: string) =>
-  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+const WHATSAPP_DEFAULT_MESSAGE =
+  "Olá, vim pelo o site RR ENGENHARIA e gostaria de um orçamento";
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_DEFAULT_MESSAGE)}`;
+const waLink = (_msg?: string) => WHATSAPP_URL;
 
 const nav = [
   ["Início", "#home"],
@@ -70,18 +73,14 @@ const portfolio = [
   { cat: "Impermeabilização", title: "Impermeabilização", image: impermeabilizacaoImg },
 ];
 
-function Logo({ inverted = false }: { inverted?: boolean }) {
+function Logo(_props: { inverted?: boolean } = {}) {
   return (
     <a href="#home" className="flex items-center gap-2.5">
-      <div className={`flex h-10 w-10 items-center justify-center rounded-md font-extrabold text-sm tracking-tighter ${inverted ? "bg-accent text-accent-foreground" : "bg-primary text-primary-foreground"}`}>
-        RR
-      </div>
-      <div className="flex flex-col leading-none">
-        <span className="text-base font-extrabold tracking-tight">RR ENGENHARIA</span>
-        <span className={`text-[10px] font-medium uppercase tracking-[0.18em] ${inverted ? "text-sidebar-foreground/60" : "text-muted-foreground"}`}>
-          Engenharia & Reformas
-        </span>
-      </div>
+      <img
+        src={logoImg}
+        alt="RR Engenharia"
+        className="h-12 w-auto md:h-14"
+      />
     </a>
   );
 }
