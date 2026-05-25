@@ -25,6 +25,9 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import hero from "@/assets/hero.jpg";
+import fachadaImg from "@/assets/fachada.jpg";
+import pinturaImg from "@/assets/pintura-predial.jpg";
+import impermeabilizacaoImg from "@/assets/impermeabilizacao.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -59,15 +62,12 @@ const differentials = [
   { icon: CalendarClock, title: "Cumprimento de Prazos", desc: "Cronograma claro e prazo respeitado." },
 ];
 
-const categories = ["Todos", "Fachada", "Pintura", "Impermeabilização", "Reformas"] as const;
+const categories = ["Todos", "Fachada", "Pintura", "Impermeabilização"] as const;
 
 const portfolio = [
-  { cat: "Fachada", title: "Recuperação de Fachada — Condomínio Costa Azul", before: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80", after: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" },
-  { cat: "Pintura", title: "Pintura Interna — Residência Pituba", before: "https://images.unsplash.com/photo-1562184552-997c461abbe6?w=800&q=80", after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" },
-  { cat: "Impermeabilização", title: "Laje Impermeabilizada — Edifício Comercial", before: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=80", after: "https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=800&q=80" },
-  { cat: "Reformas", title: "Reforma Comercial — Loja Centro", before: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80", after: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80" },
-  { cat: "Fachada", title: "Restauro de Pastilhas — Edifício Residencial", before: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80", after: "https://images.unsplash.com/photo-1494526585095-c41746248156?w=800&q=80" },
-  { cat: "Pintura", title: "Pintura Externa — Sobrado Alphaville", before: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=800&q=80", after: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" },
+  { cat: "Fachada", title: "Fachada", image: fachadaImg },
+  { cat: "Pintura", title: "Pintura", image: pinturaImg },
+  { cat: "Impermeabilização", title: "Impermeabilização", image: impermeabilizacaoImg },
 ];
 
 function Logo({ inverted = false }: { inverted?: boolean }) {
@@ -184,7 +184,7 @@ function Index() {
           </div>
           <div className="hidden lg:col-span-5 lg:block">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border shadow-xl">
-              <img src={hero} alt="Obra RR Engenharia" className="h-full w-full object-cover" />
+              <img src={fachadaImg} alt="Obra RR Engenharia" className="h-full w-full object-cover" />
               <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-background/95 p-4 backdrop-blur">
                 <div className="text-xs font-semibold uppercase tracking-wider text-accent">Projeto em destaque</div>
                 <div className="mt-1 text-sm font-semibold text-foreground">Restauração de fachada — Salvador / BA</div>
