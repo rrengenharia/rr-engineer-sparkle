@@ -250,7 +250,7 @@ function Index() {
             <div className="max-w-2xl">
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Portfólio</span>
               <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
-                Antes e depois dos nossos projetos
+                Obras realizadas
               </h2>
               <p className="mt-4 text-muted-foreground">
                 Veja a transformação que entregamos em cada obra — do diagnóstico ao acabamento.
@@ -273,26 +273,13 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filtered.map((p) => (
               <article key={p.title} className="overflow-hidden rounded-xl border border-border bg-card transition hover:shadow-lg">
-                <div className="grid grid-cols-2 gap-px bg-border">
-                  <div className="relative">
-                    <img src={p.before} alt="" className="aspect-[4/3] w-full object-cover" />
-                    <span className="absolute left-2 top-2 rounded bg-background/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                      Antes
-                    </span>
-                  </div>
-                  <div className="relative">
-                    <img src={p.after} alt="" className="aspect-[4/3] w-full object-cover" />
-                    <span className="absolute left-2 top-2 rounded bg-accent px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent-foreground">
-                      Depois
-                    </span>
-                  </div>
-                </div>
+                <img src={p.image} alt={p.title} className="aspect-[4/3] w-full object-cover" />
                 <div className="p-5">
                   <div className="text-xs font-semibold uppercase tracking-wider text-accent">{p.cat}</div>
-                  <h3 className="mt-1.5 text-sm font-semibold text-foreground">{p.title}</h3>
+                  <h3 className="mt-1.5 text-base font-semibold text-foreground">{p.title}</h3>
                 </div>
               </article>
             ))}
