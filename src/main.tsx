@@ -6,9 +6,9 @@ import "./styles.css";
 
 const router = getRouter();
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById("root")!;
 
-if !rootElement.innerHTML {
+if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
