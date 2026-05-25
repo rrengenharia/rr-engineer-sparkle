@@ -73,7 +73,7 @@ const portfolio = [
   { cat: "Impermeabilização", title: "Impermeabilização", image: impermeabilizacaoImg },
 ];
 
-function Logo({ inverted = false }: { inverted?: boolean }) {
+function Logo(_props: { inverted?: boolean } = {}) {
   return (
     <a href="#home" className="flex items-center gap-2.5">
       <img
