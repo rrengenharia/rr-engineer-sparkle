@@ -24,7 +24,7 @@ jobs:
       - name: Instalar dependências e fazer o Build
         run: |
           npm install
-          npm install tailwindcss @tailwindcss/vite
+          npm install -D tailwindcss@3.4.17 postcss autoprefixer
           npm run build
           cp dist/index.html dist/404.html
 
