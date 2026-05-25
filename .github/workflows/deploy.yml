@@ -20,10 +20,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-- name: Instalar dependências e fazer o Build
+
+      - name: Instalar dependências e fazer o Build
         run: |
           npm install
-          npm install -D tailwindcss @tailwindcss/vite
+          npm install tailwindcss @tailwindcss/vite
           npm run build
           cp dist/index.html dist/404.html
 
