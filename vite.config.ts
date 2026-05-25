@@ -3,7 +3,8 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  base: '/rr-engineer-sparkle/',
+  // Garanta que o nome do repositório esteja entre barras
+  base: "/rr-engineer-sparkle/", 
   plugins: [react()],
   resolve: {
     alias: {
